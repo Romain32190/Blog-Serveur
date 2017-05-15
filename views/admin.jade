@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    title Blog
+    | &#x9;&#x9;
+    meta(charset='utf-8')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css')
+    | &#x9;&#x9;
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    | &#x9;&#x9;
+    link(rel='stylesheet', type='text/css', href='style.css')
+  | &#x9;
+  body
+    nav
+      .nav-wrapper
+        img.brand-logo.left(src='http://media1.jobirl.com/images/societe/1458205956.jpg')
+        | &lt;/&gt;
+        | &#x9;&#x9;&#x9;&#x9;
+        ul.right.hide-on-med-and-down
+          li
+            a(href='admin.html') Blog
+        | &#x9;&#x9;&#x9;&#x9;
+        #heure.center-align
+    | &#x9;&#x9;
+    | &#x9;&#x9;
+    .container
+      h3.center-align Cr&eacute;er un article
+      | &#x9;&#x9;&#x9;
+      .row
+        label#titre1(for='Titre') Titre
+        | &#x9;&#x9;&#x9;&#x9;
+        input#titre.materialize-textarea(type='text')
+      | &#x9;&#x9;&#x9;
+      | &#x9;&#x9;&#x9;
+      .row
+        .input-field
+          label(for='')
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          textarea#text.materialize-textarea(placeholder='Ecrivez le texte')
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          label(for='')
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          #text1.materialize-textarea
+      | &#x9;&#x9;&#x9;
+      button#button.waves-effect.waves-light.btn.green Validez
+      | &#x9;&#x9;&#x9;
+      #contenu
+    | &#x9;
+    |   
+    script(src='node_modules/jquery/dist/jquery.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js')
+    script(src='node_modules/showdown/dist/showdown.js', <='', script='')
+      <script src="node_modules/markdown/lib/markdown.js">
+    | &#x9;
+    script(src='app.js')
