@@ -5,6 +5,7 @@ html
     | &#x9;&#x9;
     meta(charset='utf-8')
     | &#x9;&#x9;
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css')
     | &#x9;&#x9;
     link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
@@ -19,38 +20,47 @@ html
         | &#x9;&#x9;&#x9;&#x9;
         ul.right.hide-on-med-and-down
           li
-            a(href='admin.html') Blog
+            a(href='') Blog
         | &#x9;&#x9;&#x9;&#x9;
         #heure.center-align
     | &#x9;&#x9;
     | &#x9;&#x9;
     .container
-      h3.center-align Cr&eacute;er un article
-      | &#x9;&#x9;&#x9;
-      .row
-        label#titre1(for='Titre') Titre
+      form(method='POST', action='/article')
+        h3.center-align Cr&eacute;er un article
         | &#x9;&#x9;&#x9;&#x9;
-        input#titre.materialize-textarea(type='text')
-      | &#x9;&#x9;&#x9;
-      | &#x9;&#x9;&#x9;
-      .row
-        .input-field
-          label(for='')
+        .row
+          label#titre1(for='titre') Titre
           | &#x9;&#x9;&#x9;&#x9;&#x9;
-          textarea#text.materialize-textarea(placeholder='Ecrivez le texte')
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
-          label(for='')
-          | &#x9;&#x9;&#x9;&#x9;&#x9;
-          #text1.materialize-textarea
-      | &#x9;&#x9;&#x9;
-      button#button.waves-effect.waves-light.btn.green Validez
-      | &#x9;&#x9;&#x9;
+          input#titre.materialize-textarea(type='text' name='titre')
+          if errors.titre
+            div.alert.alert-danger #{errors.titre}
+        | &#x9;&#x9;&#x9;&#x9;
+        | &#x9;&#x9;&#x9;&#x9;
+        .row
+          .input-field
+            label(for='text')
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            textarea#text.materialize-textarea(placeholder='Ecrivez le texte' name='text')
+            if errors.titre
+              div.alert.alert-danger #{errors.titre}
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            label(for='')
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            #text1.materialize-textarea
+        | &#x9;&#x9;&#x9;&#x9;
+        button#button.waves-effect.waves-light.btn.green Validez
+        | &#x9;&#x9;&#x9;&#x9;
       #contenu
+    | &#x9;&#x9;
+    | &#x9;  
     | &#x9;
-    |   
+    | &#x9;
     script(src='node_modules/jquery/dist/jquery.js')
+    | &#x9;
     script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js')
+    | &#x9;
     script(src='node_modules/showdown/dist/showdown.js', <='', script='')
       <script src="node_modules/markdown/lib/markdown.js">
-    | &#x9;
+    | &#x9;&#x9;
     script(src='app.js')

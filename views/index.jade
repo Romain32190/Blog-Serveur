@@ -11,27 +11,30 @@ html
   body
     ul#dropdown1.dropdown-content
       li
-        a(href='index.html') Admin
+        a(href='') Admin
     | &#x9;
     nav
       .nav-wrapper
         ul.right.hide-on-med-and-down
           li
-            a.dropdown-button(href='index.html', data-activates='dropdown1')
+            a.dropdown-button(href='views/admin.html', data-activates='dropdown1')
               i.material-icons menu
         | &#x9;&#x9;&#x9;
         #heure.center-align
     | &#x9;
+    form(action='/article', method='POST')
     .row
       .col.s12
         #title.col.m4
           h3 Titre de l&apos;article
+          li #{user.titre}
         | &#x9;&#x9;&#x9;
         #infotitre(rows='10')
         | &#x9;&#x9;&#x9;
         center
           #article.col.m8
             h3 Article
+            li #{user.text}
         | &#x9;&#x9;&#x9;
         script(src='node_modules/jquery/dist/jquery.js')
         | &#x9;&#x9;&#x9;
