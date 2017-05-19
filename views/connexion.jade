@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title Connexion Administrateur
+    |   
+    meta(charset='utf-8')
+    |   
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css')
+    |   
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+  body
+    .center-align
+      form(name='mdpform')
+      .container
+        h3.center-align Acc&egrave;s page Admin
+        |       
+        .row
+          .col.s12
+            .card.white.darken-1
+              .card-content.dark-text
+                label(for='utilisateur') Admin
+                |               
+                input#utilisateur.validate(type='text' name='utilisateur')
+                |               
+                label(for='password') Password
+                |               
+                input#Password.validate(type='password' name='password')
+                |               
+                a.waves-effect.waves-light.btn.green
+                  i.material-icons.right(type='submit') perm_identity
+                  | Identifiez-vous
+    |   
+    script(src='node_modules/jquery/dist/jquery.js')
+    |   
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js')
+    |   
+    script(src='app.js')

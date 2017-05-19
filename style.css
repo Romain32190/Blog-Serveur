@@ -4,6 +4,7 @@
 
 	h3{
 		padding-bottom: 50px;
+		font-family: Arial Verdana;
 	}
 
 	img{
@@ -11,8 +12,17 @@
 	}
 
 
-#suprrimer {
+#supprimer {
 
 	width: 10pt;
 	height: 10pt;
+}
+
+hr{
+border: 1px black ridge;
+}
+
+h5{
+	text-decoration: underline;	
+	font-family: Arial Verdana;
 }

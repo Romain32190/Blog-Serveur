@@ -51,7 +51,29 @@ html
         | &#x9;&#x9;&#x9;&#x9;
         button#button.waves-effect.waves-light.btn.green Validez l'article
         | &#x9;&#x9;&#x9;&#x9;
-      #contenu
+        hr#ligne(align='center')
+        h3.center-align Modifier l'article
+        | &#x9;&#x9;&#x9;&#x9;
+        .row
+          label#titre1(for='inputModif') Titre
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          input#inputModif.materialize-textarea(type='text' name='inputModif')
+        | &#x9;&#x9;&#x9;&#x9;
+        | &#x9;&#x9;&#x9;&#x9;
+        .row
+          .input-field
+            label(for='textareaModif')
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            textarea#textareaModif.materialize-textarea(placeholder='Modification du texte' name='textareaModif')
+            if errors.titre
+              div.alert.alert-danger #{errors.titre}
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            label(for='')
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+    h5.center-align Article à supprimer ou à modifier :
+            #text1.materialize-textarea.center-align
+      #contenu.center-align
+        | &#x9;&#x9;&#x9;&#x9;
     | &#x9;&#x9;
     | &#x9;  
     | &#x9;
